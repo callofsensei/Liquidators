@@ -1,0 +1,47 @@
+head {
+style{
+      body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+      }
+      .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 70%;
+        width: 50%;
+      }
+
+      .container img {
+        height: 50%;
+      }
+
+    }
+}
+
+@keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(180deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .container img {
+      height: 50%;
+      animation: rotate 0.1s infinite linear;
+  }
+
+h1 {
+    border : #368c02 solid 2px ;
+    background: radial-gradient(circle, rgba(148,233,214,1) 0%, rgba(1,121,111,1) 100%);
+    font-family: 'Trebuchet MS', sans-serif;
+}
