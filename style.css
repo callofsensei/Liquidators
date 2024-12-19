@@ -6,7 +6,7 @@ style{
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: white;
+        background-color: rgb(252, 252, 252);
       }
       .container {
         display: flex;
@@ -37,11 +37,16 @@ style{
   
   .container img {
       height: 50%;
-      animation: rotate 0.1s infinite linear;
+      animation: rotate 2s infinite linear;
   }
 
 h1 {
     border : #368c02 solid 2px ;
     background: radial-gradient(circle, rgba(148,233,214,1) 0%, rgba(1,121,111,1) 100%);
     font-family: 'Trebuchet MS', sans-serif;
+}
+
+a:hover {
+  background-color: black;
+  color: yellow;    
 }
