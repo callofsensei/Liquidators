@@ -24,12 +24,17 @@
 
     <!-- Pied de page -->
     <footer>
-        <p>Dernière modification : 14/11/2024</p>
+        <p id="last-updated"></p>
         <p>Réalisation : HEYMANN Grégoire</p>
     </footer>
 
     <!-- Script pour afficher la carte -->
     <script>
+        // On affiche la date de dernière modification du document
+        document.addEventListener("DOMContentLoaded", () => {
+            document.getElementById("last-updated").textContent = `Dernière modification : ${document.lastModified}`;
+        });
+
         // On initialise la carte
         var map = L.map('map').setView([51.389, 30.098], 10); // Coordonnées approximatives de Tchernobyl
 
@@ -55,6 +60,16 @@
                 name: "Radar Duga",
                 coords: [51.679, 30.675],
                 description: "Ancien radar soviétique surnommé 'Le Pic-Vert russe'."
+            },
+            {
+                name: "Chalamphouse",
+                coords: [47.8169958,7.5389551],
+                description: "Maison d'un rescapé de Tchnernobyl."
+            },
+            {
+                name: "Accueil des Enfants de Tchernobyl",
+                coords: [47.8266698,7.5426967],
+                description: "Association qui accueille des enfants de Tchernobyl."
             }
         ];
 
