@@ -53,8 +53,15 @@
 
     <!-- Pied de page -->
     <footer>
-        <p>Dernière modification : 05/01/2025</p>
+        <p id="last-updated"></p>
         <p>Réalisation : HEYMANN Grégoire</p>
     </footer>
+
+    <script>
+        // On affiche la date de dernière modification du document
+        document.addEventListener("DOMContentLoaded", () => {
+            document.getElementById("last-updated").textContent = `Dernière modification : ${document.lastModified}`;
+        });
+    </script>
 </body>
 </html>
