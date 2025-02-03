@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>La Zone d'Exclusion</title>
     <link href="style.css" rel="stylesheet">
+    <link href="lieux.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css" />
 </head>
 <body>
     <!-- En-tête de la page -->
     <header>
-        <h1 class="main-title">Carte de la Zone d'Exclusion</h1>
+        <h1 class="main-title">🗺️ Carte de la Zone d'Exclusion 🗺️</h1>
         <button class="back-button" onclick="history.back();">Retour</button>
     </header>
 
@@ -49,35 +50,86 @@
             {
                 name: "Centrale nucléaire de Tchernobyl",
                 coords: [51.389, 30.099],
-                description: "Lieu de l'explosion du réacteur 4 en 1986."
+                description: "Lieu de l'explosion du réacteur 4 en 1986.",
+                imageUrl: "https://www.usinenouvelle.com/mediatheque/3/4/9/000496943_896x598_c.jpg"
             },
             {
                 name: "Ville fantôme de Pripyat",
                 coords: [51.406, 30.055],
-                description: "Ville abandonnée suite à l'évacuation après l'accident."
+                description: "Ville abandonnée suite à l'évacuation après l'accident.",
+                imageUrl: "https://chernobylstory.com/fr/wp-content/uploads/2020/08/Pripyat-Today-1170x771.jpg"
             },
             {
                 name: "Radar Duga",
                 coords: [51.679, 30.675],
-                description: "Ancien radar soviétique surnommé 'Le Pic-Vert russe'."
+                description: "Ancien radar soviétique surnommé 'Le Pic-Vert russe'.",
+                imageUrl: "https://chernobylstory.com/wp-content/uploads/2020/08/duga-woodpecker-1170x771.jpg"
             },
             {
                 name: "Chalamphouse",
                 coords: [47.8169958,7.5389551],
-                description: "Maison d'un rescapé de Tchnernobyl."
+                description: "Maison d'un rescapé de Tchnernobyl.",
+                imageUrl: "chalamp\\chalamphouse.PNG"
             },
             {
                 name: "Accueil des Enfants de Tchernobyl",
                 coords: [47.8266698,7.5426967],
-                description: "Association qui accueille des enfants de Tchernobyl."
+                description: "Association qui accueille des enfants de Tchernobyl.",
+                imageUrl: "https://www.lesenfantsdetchernobyl.fr/Images/Logo_EDT_moyen.jpg"
+            },
+            {
+                name: "Ville de Tchernobyl",
+                coords: [51.276417727409495, 30.22007227244332],
+                description: "Tchernobyl, une ville située à 60 Km de la centrale et de Prypiat.",
+                imageUrl: "https://upload.wikimedia.org/wikipedia/commons/b/bc/Administrative_center%2C_Radiation_Control_%2811383715816%29.jpg"
+            },
+            {   
+                name: "Usine Jupiter",
+                coords: [51.402604191352026, 30.04209241364744],
+                description: "Cette usine produisait secrètement des composants semi-conducteurs pour l'armée soviétique.",
+                imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuc-AT1vecRnYcRWr0LkGjIeStiv2Q7jH-wQ&s"
+            },
+            {   
+                name: "Réacteurs 5 et 6",
+                coords: [51.37966281441334, 30.12574232671766],
+                description: "Un chantier interrompu de réacteurs de deuxième génération.",
+                imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Reactors_5_%26_6_Chernobyl_Nuclear_Power_Station.jpg/1920px-Reactors_5_%26_6_Chernobyl_Nuclear_Power_Station.jpg"
+            },
+            {   
+                name: "Kopachi",
+                coords: [51.35396712548589, 30.127133920042684],
+                description: "Ce village a été abandonné suite à l'évacuation des habitants.",
+                imageUrl: "https://upload.wikimedia.org/wikipedia/commons/f/f5/Primary_School_at_Kopachi_Village_-_Chernobyl_Exclusion_Zone_-_Northern_Ukraine_-_01_%2827099679545%29.jpg"
+            },
+            {   
+                name: "Laboratoire d'hydrobiologie",
+                coords: [51.373586760126265, 30.13903605768067],
+                description: "Autrefois une ferme piscicole, elle a été transformée en laboratoire testant les effets des radiations sur les organismes aquatiques",
+                imageUrl: "https://storage.needpix.com/rsynced_images/fish-976080_1280.png"
+            },
+            {   
+                name: "Forêt rouge",
+                coords: [51.38011, 30.04908],
+                description: "Ce nom est dû aux radiations ayant affecté la couleur des foliages",
+                imageUrl: "https://live.staticflickr.com/65535/38344451736_c936419537_b.jpg"
             }
         ];
 
         pointsOfInterest.forEach(function(point) {
+            let popupContent = "<strong>" + point.name + "</strong><br>" + point.description;
+            if (point.imageUrl) {
+                // Ajoute l'image si une URL est définie
+                popupContent += `
+                <br>
+                <div style="text-align: center;">
+                <img src="${point.imageUrl}" alt="${point.name}" style="max-width: 200px; max-height: 150px; display: inline-block; margin-top: 5px;">
+                </div>`;;
+            }
             L.marker(point.coords)
                 .addTo(map)
-                .bindPopup("<strong>" + point.name + "</strong><br>" + point.description);
-        });
+                .bindPopup(popupContent);
+});
+
     </script>
 </body>
 </html>
