@@ -75,7 +75,7 @@
                 name: "Accueil des Enfants de Tchernobyl",
                 coords: [47.8266698,7.5426967],
                 description: "Association qui accueille des enfants de Tchernobyl.",
-                imageUrl: "https://www.lesenfantsdetchernobyl.fr/Images/Logo_EDT_moyen.jpg"
+                imageUrl: "https://lesenfantsdetchernobyl.fr/wp-content/uploads/2024/04/cropped-Logo_EDT_moyen-1.jpg"
             },
             {
                 name: "Ville de Tchernobyl",
@@ -112,24 +112,33 @@
                 coords: [51.38011, 30.04908],
                 description: "Ce nom est dû aux radiations ayant affecté la couleur des foliages",
                 imageUrl: "https://live.staticflickr.com/65535/38344451736_c936419537_b.jpg"
+            },
+            {   
+                name: "Parking",
+                coords: [51.15418197166142, 29.982918418496823],
+                description: "Skibidinobyl",
+                imageUrl: "https://i.redd.it/c24k2ggs13h21.jpg"
             }
         ];
 
         pointsOfInterest.forEach(function(point) {
-            let popupContent = "<strong>" + point.name + "</strong><br>" + point.description;
-            if (point.imageUrl) {
-                // Ajoute l'image si une URL est définie
-                popupContent += `
+    let popupContent = `<strong>${point.name}</strong><br>${point.description}`;
+    if (point.imageUrl) {
+        popupContent += `
+            <br>
+            <div style="text-align: center;">
+                <img src="${point.imageUrl}" alt="${point.name}" 
+                    style="max-width: 200px; max-height: 150px; display: inline-block; margin-top: 5px;">
                 <br>
-                <div style="text-align: center;">
-                <img src="${point.imageUrl}" alt="${point.name}" style="max-width: 200px; max-height: 150px; display: inline-block; margin-top: 5px;">
-                </div>`;;
-            }
-            L.marker(point.coords)
-                .addTo(map)
-                .bindPopup(popupContent);
+                <a href="construction.html" style="color: blue; text-decoration: none; font-weight: bold;">
+                    ➡️ En savoir plus
+                </a>
+            </div>`;
+    }
+    L.marker(point.coords)
+        .addTo(map)
+        .bindPopup(popupContent);
 });
-
     </script>
 </body>
 </html>

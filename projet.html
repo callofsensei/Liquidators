@@ -1,3 +1,7 @@
+<!--TO DO LIST :
+responsive design
+mettre en avant les pages les plus appréciées-->
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -5,39 +9,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zone de Tchernobyl</title>
     <link href="style.css" rel="stylesheet">
+   
 </head>
 <body>
-    <!-- En-tête du site -->
     <header>
         <h1 class="main-title">☢️ Zone de Tchernobyl ☢️</h1>
         <nav class="navbar">
             <ul>
                 <li><a href="construction.html">Genèse de la Centrale</a></li>
                 <li><a href="accident.html">L'Accident</a></li>
-                <li><a href="noa_est_indien.html">Noa est indien</a></li>
+                <li><a href="liquidateurs.html">Les liquidateurs</a></li>
                 <li><a href="Prypiat.html">Prypiat</a></li>
                 <li><a href="carte.html">La Zone d'Exclusion</a></li>
+                <li><a href="catastrophes.html">Catastrophes</a></li>
             </ul>
         </nav>
     </header>
-
-    <!-- Introduction -->
+    
     <section class="introduction">
-        <h2>Bienvenue sur le site de la Zone de Tchernobyl</h2>
+        <h2>Bienvenue sur le site de la Zone de Tchernobyl !</h2>
         <p>
-            Ce site est dédié à l'exploration de l'une des tragédies les plus marquantes de l'histoire moderne :
-            l'accident nucléaire de la centrale nucléaire de Tchernobyl. Vous découvrirez ici des informations sur la genèse de la centrale,
-            les étapes de déroulement de l'accident, les efforts héroïques des liquidateurs, et la ville fantôme de Prypiat.
-            Une carte de la zone d'exclusion vous permettra de mieux comprendre l'impact de cette catastrophe sur la région ainsi 
-            que les lieux marquants de la Zone.
-        </p>
-        <p>
-            Plongez dans cette fascinante épopée à travers l'histoire, le nucléaire, et les leçons à tirer de cette catastrophe,
-            et découvrez le visage actuel de la zone d'exclusion.
+            Plongez au cœur de l'une des catastrophes nucléaires les plus marquantes de l'histoire. Découvrez
+            les origines de la centrale de Tchernobyl, les circonstances tragiques de l'accident, et son impact durable.
+            Ce site vous guide à travers l'histoire de Prypiat, la zone d'exclusion et les efforts pour contenir les radiations.
         </p>
     </section>
-
-    <!-- Contenu principal -->
+    
     <main>
         <section class="gallery">
             <h2>Images historiques</h2>
@@ -54,26 +51,28 @@
                     <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/IAEA_02790015_%285613115146%29.jpg" alt="Centrale nucléaire">
                     <figcaption>Vue du réacteur 4</figcaption>
                 </figure>
+                <figure>
+                    <img src="https://img.goodfon.com/original/1920x1080/d/c6/gorod-pripyat-chernobyl.jpg" alt="Nuclear Slave">
+                    <figcaption>Entrée de Prypiat</figcaption>
+                </figure>
             </div>
         </section>
 
         <section class="links">
             <h2>Liens utiles</h2>
             <ul>
-                <li><a href="https://www.youtube.com/@callofsensei641/featured" target="_blank">Youtube</a></li>
-                <li><a href="https://www.instagram.com/callofsensei/?hl=it" target="_blank">Instagram</a></li>
+                <li><a href="https://www.youtube.com/@callofsensei641/featured" target="_blank">Chaîne YouTube</a></li>
+                <li><a href="https://www.instagram.com/callofsensei/" target="_blank">Instagram</a></li>
             </ul>
         </section>
     </main>
 
-    <!-- Pied de page -->
     <footer>
         <p id="last-updated"></p>
         <p>Réalisation : HEYMANN Grégoire</p>
     </footer>
 
     <script>
-        // On affiche la date de dernière modification du document
         document.addEventListener("DOMContentLoaded", () => {
             document.getElementById("last-updated").textContent = `Dernière modification : ${document.lastModified}`;
         });
