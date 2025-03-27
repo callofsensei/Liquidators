@@ -1,43 +1,58 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
-    color: #333;
+    background-color: #1a1a1a;
+    color: white;
+    text-align: center;
     line-height: 1.6;
     padding: 0 20px;
 }
 
-.main-title {
-    text-align: center;
-    background-color: #004d40;
-    color: white;
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 200px; /* Ajustez la hauteur selon vos besoins */
     padding: 20px;
+    background-color: #333;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.main-title {
+    color: #ffcc00;
     font-size: 2.5em;
-    margin: 0;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 1.2em;
+    color: #bf7c51;
+    margin-bottom: 40px;
 }
 
 .back-button {
-    display: inline-block;
     margin: 20px 0;
     padding: 10px 20px;
-    background-color: #368c02;
-    color: white;
-    text-decoration: none;
-    font-size: 1em;
+    background-color: #ffcc00;
+    color: #1a1a1a;
     border: none;
     border-radius: 5px;
+    font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
 .back-button:hover {
-    background-color: #004d40;
+    background-color: #ffbb00;
 }
 
 .timeline {
-    background: white;
+    background: #2a2a2a;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     padding: 20px;
     margin: 20px auto;
     max-width: 800px;
@@ -45,7 +60,7 @@ body {
 
 .timeline h2 {
     text-align: center;
-    color: #004d40;
+    color: #ffcc00;
     margin-bottom: 20px;
 }
 
@@ -57,22 +72,21 @@ body {
 .timeline li {
     margin-bottom: 15px;
     padding: 15px;
-    background-color: #e8f5e9;
-    border-left: 5px solid #368c02;
+    background-color: #3a3a3a;
+    border-left: 5px solid #ffcc00;
     border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .timeline li .date {
     font-weight: bold;
-    color: #004d40;
+    color: #ff5733;
 }
 
 footer {
-    text-align: center;
     background-color: #333;
+    padding: 15px;
+    margin-top: 20px;
     color: white;
-    padding: 10px 0;
-    margin-top: 40px;
     font-size: 0.9em;
 }
