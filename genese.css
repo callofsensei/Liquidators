@@ -57,6 +57,24 @@ header {
     margin-bottom: 15px;
 }
 
+.image-container {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.image-container figcaption {
+    font-size: 0.9em;
+    color: #ffcc00;
+    margin-top: 10px;
+}
+
 footer {
     background-color: #333;
     padding: 15px;
